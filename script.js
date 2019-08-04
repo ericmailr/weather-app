@@ -118,7 +118,7 @@ const setCitySelectListeners = (cities) => {
     });
 }
 
-searchButton.addEventListener('click', async function() {
+const searchHandler = async () => {
     let citySearchInput = input.value;
     if (citySearchInput === "") {
         searchResults.innerHTML = "Please enter a city or zip code.";
@@ -145,7 +145,15 @@ searchButton.addEventListener('click', async function() {
             }
         }
     }
+}
+
+searchButton.addEventListener('click',  searchHandler);
+input.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+    searchButton.click();
+  }
 });
+    
 
 setWeather();
 
