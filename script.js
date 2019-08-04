@@ -61,7 +61,7 @@ const populateWeatherHTML = () => {
     description.innerHTML = weather.description;
     minTemp.innerHTML = "Low: " + weather.minTemp;
     maxTemp.innerHTML = "High: " + weather.maxTemp;
-    icon.src = "http://openweathermap.org/img/w/" + weather.icon + ".png";
+    icon.src = "https://openweathermap.org/img/w/" + weather.icon + ".png";
     wind.innerHTML = (currentUnitType == 'imperial') ? `Wind: ${weather.wind} mph` : `Wind: ${weather.wind} m/s` ;
     toggleUnitsButton.innerHTML = (currentUnitType == 'imperial') ? "Show Metric Units" : "Show Imperial Units";
 }
