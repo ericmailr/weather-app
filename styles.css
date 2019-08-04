@@ -1,0 +1,97 @@
+/* css reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html, body {
+    height: 100%;
+}
+
+#container {
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-results {
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#weather {
+    background-color: #DDDDDD;
+    width: 50%;
+    height: 50%;
+    min-height: 450px;
+    border: solid;
+    border-width: 20px;
+    border-radius: 20px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#temp {
+    font-size: 4vw;
+}
+
+#temperatures {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-top: -40px;
+    font-size: 1.3vw;
+}
+
+#description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -40px;
+}
+
+#description {
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+#icon {
+    width: 200%;
+    margin-left:  -50%;
+}
+
+#name {
+    font-size: 2vw;
+}
+
+button, input {
+    font-size: 1.2vw;
+}
+

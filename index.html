@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="weather">
+                <p id="name"></p>
+                <p id="temp"></p>
+                <div id="temperatures">
+                    <p id="minTemp"></p>
+                    <p id="maxTemp"></p>
+                </div>
+                <div id="description-container">
+                    <span><img id="icon" src=""></img></span>
+                    <p id="description"></p>
+                </div>
+                <p id="wind"></p>
+                <button id="toggleUnits">Show Metric Units</button>
+            </div>
+            <form>
+                <input placeholder="Enter city or zip code">
+                <button id="search-button" type="submit">Search</button>
+            </form>
+            <ul id="search-results">
+            </ul>
+
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
