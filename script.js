@@ -5,8 +5,8 @@ let currentWeather = [];
 
 const fetchWithZip = (zipcode) => {
     try {
-        let responseImperial = fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=imperial&APPID=${API_KEY}`, {mode: 'cors'});    
-        let responseMetric = fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=metric&APPID=${API_KEY}`, {mode: 'cors'});    
+        let responseImperial = fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=imperial&APPID=${API_KEY}`, {mode: 'cors'});    
+        let responseMetric = fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&units=metric&APPID=${API_KEY}`, {mode: 'cors'});    
         return [responseImperial, responseMetric];
     } catch (err) {
         console.log("fetchWithZip Error: " + err);
@@ -15,8 +15,8 @@ const fetchWithZip = (zipcode) => {
 
 const fetchWithCityID = (cityID) => {
     try {
-        let responseImperial = fetch(`http://api.openweathermap.org/data/2.5/weather?id=${cityID}&units=imperial&APPID=${API_KEY}`, {mode: 'cors'});    
-        let responseMetric = fetch(`http://api.openweathermap.org/data/2.5/weather?id=${cityID}&units=metric&APPID=${API_KEY}`, {mode: 'cors'});    
+        let responseImperial = fetch(`https://api.openweathermap.org/data/2.5/weather?id=${cityID}&units=imperial&APPID=${API_KEY}`, {mode: 'cors'});    
+        let responseMetric = fetch(`https://api.openweathermap.org/data/2.5/weather?id=${cityID}&units=metric&APPID=${API_KEY}`, {mode: 'cors'});    
         return [responseImperial, responseMetric];
     } catch (err) {
         console.log("fetchWithCityID Error: " + err);
@@ -25,7 +25,7 @@ const fetchWithCityID = (cityID) => {
 
 const getCities = async (city) => {
     try {
-        let response = await fetch(`http://api.openweathermap.org/data/2.5/find?q=${city}&APPID=${API_KEY}`, {mode: 'cors'});    
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/find?q=${city}&APPID=${API_KEY}`, {mode: 'cors'});    
         return response;
     } catch (err) {
         console.log("getCities Error: " + err);
