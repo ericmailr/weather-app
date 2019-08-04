@@ -54,14 +54,14 @@ const processJSON = (responsePromise) => {
     const icon = document.getElementById('icon');
     const weatherDiv = document.getElementById('weather');
 
-const populateWeatherHTML = () => {
+const populateWeatherHTML = async () => {
     let weather = (currentUnitType == 'imperial') ? currentWeather[0] : currentWeather[1];
     temp.innerHTML = (currentUnitType == 'imperial') ? weather.temp + "&#xb0; F"  : weather.temp + "&#xb0; C";
     name.innerHTML = weather.name;
     description.innerHTML = weather.description;
     minTemp.innerHTML = "Low: " + weather.minTemp;
     maxTemp.innerHTML = "High: " + weather.maxTemp;
-    icon.src = "https://openweathermap.org/img/w/" + weather.icon + ".png";
+    icon.src = await "https://openweathermap.org/img/w/" + weather.icon + ".png";
     wind.innerHTML = (currentUnitType == 'imperial') ? `Wind: ${weather.wind} mph` : `Wind: ${weather.wind} m/s` ;
     toggleUnitsButton.innerHTML = (currentUnitType == 'imperial') ? "Show Metric Units" : "Show Imperial Units";
 }
